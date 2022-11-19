@@ -1,0 +1,151 @@
+
+
+Problem 2: 
+1) CONSTANT 
+This is the most efficient time complexity. An algorithm is considered constant if it runs in the same time regardless of the number of inputs.
+EX:
+const addTwoNum = (numOne, numTwo) => {
+    return numOne + numTwo;
+}
+
+2) LOGARITHMIC
+Log time complexity is when the time execution is proportional the logarithm of the input size. It means that as the input size grows, the number of operations grows very slowly.
+EX:
+const logFunction = (arr) => {
+    const loopCount;
+    for( i = 0; i < arr.length; i*=2){
+        loopCount++;
+    }
+    return loopCount;
+}
+
+3) LINEAR
+Linear time complexity has a 1:1 relationship between data size and time completion. This means as the data input grows so does the time it takes to run the function. The array with 20 elements will take longer than the array with 5 because it is iterating over each index.
+EX:
+function reverseArray(arr) {
+  let newArr = []
+  for (let i = arr.length - 1; i >= 0; i--) {
+    newArr.push(arr[i])
+  }
+  return newArr
+}
+
+4) QUADRATIC
+Quadratic time complexity is when you increase the size of the input by a multiplication factor. For every item in the first array, we have to loop over every single item in the second array and perform a multiplication.
+EX:
+const multiplyAll = (arr1, arr2) => {
+  if (arr1.length !== arr2.length) return undefined
+  let total = 0
+  for (let i of arr1) {
+    for (let j of arr2) {
+      total += i * j
+    }
+  }
+  return total
+}
+
+5) Factorial O(n!)
+This is the worst time complexity. A factorial is just the product of every number up to that number. So 5! (“five factorial”) is 1 x 2 x 3 x 4 x 5 = 120.
+EX:
+const factorial = (n) => {
+  let num = n
+  if (n === 0) return 1
+  for (let i = 0; i < n; i++) {
+    num = n * factorial(n - 1)
+  }
+  return num
+}
+
+Problem 3)
+Big O notation is important to keep the efficiency and production in business high. It costs money to use resources like CPU and memory, and if it is used unnecessarily due to poor time complexity it will waste money.
+
+
+Problem 4)
+The problem with 'performance.now()' is it's not always giving an accurate representation of the time complexity of the code. The time taken to run a certain function or to perform a certain task depends on how powerful the CPU is, and what other programs are running on a particular computer.
+
+
+Problem 5)
+Total Time: 1 + n + n + n^2
+Consolidated Time: n^2
+
+Problem 6)
+Total Time: 1 + n + n^3
+Consolidated Time: n^3
+
+Problem 7)
+Constants become negligible as the actual growth impact comes from the largest Big O. When there's multiple time complexities in a computation, the larger time complexity will have the greater impact on the performance of that code.
+
+Problem 8)
+Space complexity refers to the total amount of memory space used by an algorithm/program. It helps us decide how much memory to allocate to various aspects of the application.
+
+Problem 9) 
+Boolean: constant.
+Undefined: constant.
+Null: constant.
+Numbers: constant.
+String: Linear.
+Array: generally Linear.
+Object: generally Linear.
+
+Problem 10)
+You should use an array when you need fast access to elements and when the order matters.
+You should use an object when there's no need for ordering and no need for fast access to elements.
+
+Problem 11)
+1) O(1)
+2) O(1)
+3) O(1)
+4) O(1)
+5) O(n)
+6) O(1)
+7) O(n)
+8) O(n)
+
+Problem 12)
+1) O(1)
+2) O(1)
+3) O(n)
+4) O(1)
+5) O(n)
+6) O(log n)
+7) O(n)
+8) O(1)
+9) O(n)
+10) O(n)
+11) O(n)
+12) O(n)
+13) O(n)
+14) O(n)
+
+Problem 13)
+1) 
+Time Complexity: Linear because it iterates through each index of an array until finding the matching number.
+Space Complexity: Linear because arrays are generally linear space.
+2)
+Time Complexity: Linear because it iterates through each index in the array and then pushes to a new array if the element matches the condition set.
+Space Complexity: Linear because it is iterating through one array and creating a new one from it.
+3) 
+Time Complexity: Logarithmic because it only looks at the first and last index of the array.
+Space Complexity: 
+4) 
+Time Complexity: Linear because it iterates the entire array.
+Space Complexity: Constant because it is storing a single number.
+5) 
+Time Complexity: Logarithmic because it's not looking at each element in the array.
+Space Complexity: Constant because it is returning a single number.
+6) 
+Time Complexity: There's two potential time complexities. Worst case it will be logarithmic because of the recursive binary search and best case it will be constant.
+Space Complexity: It will either be O(log n) or constant.
+7)
+Time Complexity: Quadratic because there is a nested forEach.
+Space Complexity: Linear because it is returning an array.
+8) 
+Time Complexity: Quadratic because it is iterating through the array.
+Space Complexity: Linear because it's returning an array.
+9)
+Time Complexity: Quadratic because it's iterating through each element.
+Space Complexity: Linear because it's returning an array.
+10)
+Time Complexity: Linear because .filter and .reduce are both linear methods.
+Space Complexity: Constant because it is returning a number.
+
